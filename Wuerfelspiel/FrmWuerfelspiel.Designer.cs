@@ -35,7 +35,7 @@
             // 
             // timer2
             // 
-            this.timer2.Tick += new System.EventHandler(this.SpielTimer_Tick);
+           // this.timer2.Tick += new System.EventHandler(this.SpielTimer_Tick);
             // 
             // FrmWuerfelspiel
             // 
@@ -45,8 +45,8 @@
             this.KeyPreview = true;
             this.Name = "FrmWuerfelspiel";
             this.Text = "Form1";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FrmWuerfelspiel_Paint);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmWuerfelspiel_KeyDown);
+           // this.Paint += new System.Windows.Forms.PaintEventHandler(this.FrmWuerfelspiel_Paint);
+            //this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmWuerfelspiel_KeyDown);
             this.ResumeLayout(false);
 
         }

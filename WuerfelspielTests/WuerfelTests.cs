@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Wuerfelspiel;
 
@@ -62,6 +63,22 @@ namespace WuerfelspielTests
 
             //Assert 
             Assert.AreEqual(3, wuerfeln);
+        }
+
+        [TestMethod]
+        public void Wuerfel_SetztAugenzahlUndGesichertZurücl()
+        {
+            //arrange
+            Wuerfel w = new Wuerfel();
+            int augenzahl = 6;
+            bool gesichert = true;
+
+            //act
+            w.ResetWuerfel();
+
+            //assert
+            Assert.AreEqual(0, w.Augenzahl);
+            Assert.IsFalse(w.Gesichert);
         }
 
     }

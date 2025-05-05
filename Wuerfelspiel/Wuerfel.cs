@@ -8,7 +8,6 @@ namespace Wuerfelspiel
         private int augenzahl;
         private bool gesichert;
 
-
         public int Augenzahl
         {
             get { return augenzahl; }
@@ -35,13 +34,12 @@ namespace Wuerfelspiel
                 return Augenzahl;
             }
         }
-
         public int WuerfelDreiMal()
         {
             int letzterWurf = 0;
             
 
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 3; i++)
             {
                 if(!Gesichert)
                 {
@@ -53,6 +51,12 @@ namespace Wuerfelspiel
                 }
             }
             return letzterWurf;
+        }
+
+        public void ResetWuerfel()
+        {
+            augenzahl = 0;
+            gesichert = false;
         }
     }
 }
