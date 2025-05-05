@@ -8,11 +8,16 @@ namespace WuerfelspielTests
     public class WuerfelTests
     {
         [TestMethod]
-        public void DummyTest()
+        public void Wuerfel_KannErstelltWerden()
         {
-            // Dieser Test ist hier, um eine GitHub-Funktion zu testen. 
-            // Einfach löschen :)
-            Assert.IsTrue(true);// is tatsächlich true :O
+            //arrange 
+            
+
+            //act 
+            Wuerfel w = new Wuerfel();
+
+            //assert
+            Assert.IsNotNull(w);
         }
     }
 }
