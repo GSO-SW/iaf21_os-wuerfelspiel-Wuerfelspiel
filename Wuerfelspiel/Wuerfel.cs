@@ -7,14 +7,12 @@ namespace Wuerfelspiel
     {
         private int augenzahl;
 
-<<<<<<< HEAD
         public int Augenzahl
         {
             get { return augenzahl; }
         }
 
-            
-=======
+
         public int Wuerfeln()
         {
             Random rnd = new Random();
@@ -22,12 +20,5 @@ namespace Wuerfelspiel
 
             return zahl;
         }
-
-        public int Augenzahl
-        {
-            get { return augenzahl; }
-
-        }
->>>>>>> 6d58e43534bdba0da8993fc9af02f77ef7c523df
     }
 }
