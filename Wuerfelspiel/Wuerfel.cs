@@ -21,9 +21,6 @@ namespace Wuerfelspiel
             set { gesichert = value; }
         }
 
- 
-
-
         public int Wuerfeln()
         {
             if(gesichert != true)
@@ -42,6 +39,7 @@ namespace Wuerfelspiel
         public int WuerfelDreiMal()
         {
             int letzterWurf = 0;
+            
 
             for (int i = 0; i < 2; i++)
             {
