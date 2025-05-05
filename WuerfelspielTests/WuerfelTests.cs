@@ -7,6 +7,7 @@ namespace WuerfelspielTests
     [TestClass]
     public class WuerfelTests
     {
+
         [TestMethod]
         public void Wuerfel_KannErstelltWerden()
         {
@@ -36,16 +37,31 @@ namespace WuerfelspielTests
         }
 
         [TestMethod]
-        public void Wuerfel_SollFuenfMalWuerfeln()
+        public void Wuerfel_WuerfeltNichtBeiGesichertemZustand()
+        {
+            //Arrange
+            Wuerfel w = new Wuerfel();
+
+            //Act
+            int ergebnis = w.Wuerfeln();
+            w.Gesichert = true;
+            int ergebnis2 = w.Wuerfeln();
+
+            Assert.AreEqual(ergebnis, ergebnis2);
+
+        }
+
+        [TestMethod]
+        public void Wuerfel_SollDreiMalWuerfeln()
         {
             //arrange
             Wuerfel w = new Wuerfel();
 
             //act 
-            int wuerfeln = w.Wuerfeln();
+            int wuerfeln = w.WuerfelDreiMal();
 
             //Assert 
-            Assert.AreEqual(5, wuerfeln);
+            Assert.AreEqual(3, wuerfeln);
         }
 
     }

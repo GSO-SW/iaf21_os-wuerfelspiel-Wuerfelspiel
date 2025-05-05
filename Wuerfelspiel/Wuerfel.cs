@@ -6,19 +6,59 @@ namespace Wuerfelspiel
     public class Wuerfel
     {
         private int augenzahl;
+        private bool gesichert;
+
 
         public int Augenzahl
         {
             get { return augenzahl; }
+            set { augenzahl = value; }
         }
+
+        public bool Gesichert
+        {
+            get { return gesichert; }
+            set { gesichert = value; }
+        }
+
+ 
 
 
         public int Wuerfeln()
         {
-            Random rnd = new Random();
-            int zahl = rnd.Next(1, 7);
+            if(gesichert != true)
+            {
+                Random rnd = new Random();
+                Augenzahl = rnd.Next(1, 7);
 
-            return zahl;
+                return augenzahl;
+            }
+            else
+            {
+                return Augenzahl;
+            }
+        }
+
+        public int WuerfelDreiMal()
+        {
+            int letzterWurf = 0;
+
+            for (int i = 0; i < 2; i++)
+            {
+                if(!Gesichert)
+                {
+                    letzterWurf = Wuerfeln();
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return letzterWurf;
         }
     }
 }
+       
+
+    
+
