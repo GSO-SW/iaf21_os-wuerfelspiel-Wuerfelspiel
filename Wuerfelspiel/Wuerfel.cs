@@ -38,12 +38,11 @@ namespace Wuerfelspiel
         {
             int letzterWurf = 0;
             
-
             for (int i = 0; i < 3; i++)
             {
                 if(!Gesichert)
                 {
-                    letzterWurf = Wuerfeln();
+                    letzterWurf = augenzahl;
                 }
                 else
                 {
